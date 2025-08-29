@@ -12,7 +12,7 @@
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #f9f8ff; /* 더 연한 보라색 배경 */
+      background-color: #f9f8ff;
       margin: 0;
       padding: 40px 20px;
       color: #333;
@@ -21,11 +21,11 @@
     }
     .content-wrapper {
       max-width: 600px;
-      margin: 0 auto; /* 중앙 정렬 */
+      margin: 0 auto;
     }
     .logo {
-      max-width: 350px; /* 로고 최대 너비 설정 */
-      margin-bottom: 25px; /* 로고와 제목 사이 간격 */
+      max-width: 300px;
+      margin-bottom: 25px;
     }
     h1 {
       color: #1e88e5;
@@ -48,17 +48,20 @@
     .button-container {
       display: flex;
       flex-direction: column;
-      gap: 16px; /* 버튼 간격 소폭 조정 */
+      align-items: center; /* PC에서 버튼을 가운데 정렬하기 위해 추가 */
+      gap: 16px;
       margin-top: 30px;
       margin-bottom: 40px;
     }
     .button {
       display: flex;
       align-items: center;
-      justify-content: center;
+      /* justify-content: center; 제거 -> 좌측 정렬 */
       background: #ffffff;
       color: #333;
-      padding: 12px 25px; /* 세로 padding을 18px에서 12px로 수정 */
+      width: 100%; /* 너비를 100%로 설정 */
+      max-width: 450px; /* PC에서의 최대 너비 제한 */
+      padding: 12px 25px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
@@ -66,23 +69,25 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
       border: 1px solid #eee;
+      box-sizing: border-box; /* padding을 포함하여 너비 계산 */
     }
     .button:hover {
       box-shadow: 0 6px 20px rgba(0,0,0,0.12);
       transform: translateY(-2px);
     }
-    /* 아이콘(img) 스타일 */
     .button img {
-      width: 42px;  /* 아이콘 너비 */
-      height: 42px; /* 아이콘 높이 */
-      margin-right: 20px; /* 아이콘과 텍스트 간격 */
+      width: 42px;
+      height: 42px;
+      margin-right: 20px;
     }
-    .button .text-content {
-      flex-grow: 1;
-      text-align: center;
-      /* 아이콘 너비(42px) + 간격(20px) = 62px. 따라서 -62px로 조정하여 텍스트 중앙 정렬 */
-      margin-left: -62px;
+    
+    /* 화면 너비가 600px 이하일 때 (모바일 환경) */
+    @media (max-width: 600px) {
+      .button {
+        max-width: 100%; /* 최대 너비 제한 해제 */
+      }
     }
+
     .footer {
       font-size: 0.85em;
       color: #888;
@@ -104,19 +109,19 @@
     <div class="button-container">
       <a class="button" href="tel:01027507500">
         <img src="phone.png" alt="전화 아이콘">
-        <span class="text-content">상담 전화: 010-2750-7500</span>
+        <span>상담 전화: 010-2750-7500</span>
       </a>
       <a class="button" href="https://pf.kakao.com/_VGAxnG" target="_blank">
         <img src="kakao.png" alt="카카오톡 아이콘">
-        <span class="text-content">카카오톡 채널 바로가기</span>
+        <span>카카오톡 채널 바로가기</span>
       </a>
       <a class="button" href="https://blog.naver.com/usodagroup" target="_blank">
         <img src="naver.png" alt="네이버 블로그 아이콘">
-        <span class="text-content">네이버 블로그</span>
+        <span>네이버 블로그</span>
       </a>
       <a class="button" href="https://www.youtube.com/@usodagroup" target="_blank">
         <img src="youtube.png" alt="유튜브 아이콘">
-        <span class="text-content">유튜브 재고처리반장</span>
+        <span>유튜브 재고처리반장</span>
       </a>
     </div>
 
