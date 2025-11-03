@@ -56,8 +56,9 @@ section {
     margin-bottom: 10px; /* 섹션 간 구분 */
 }
 section h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-top: 0;
+    text-align: center;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
 }
@@ -102,10 +103,9 @@ section h2 {
 
 /* 3-2. 연락처(#contact) 섹션 */
 
-/* 🔴 'Contact & Proposal' h2 제목 숨기기 */
-#contact h2 {
-    display: none;
-}
+/* 🔴 'Contact & Proposal' h2 제목 숨기기 코드를 제거했습니다. */
+/* h2가 'section h2'의 기본 스타일을 따라 다시 보이게 됩니다. */
+
 
 /* === 사장님이 주신 '아이콘+텍스트' 버튼 스타일로 교체되었습니다 === */
 .button-container {
