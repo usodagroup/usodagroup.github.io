@@ -1,0 +1,213 @@
+/* 전체 기본 설정 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* 배경색 */
+    color: #333; /* 기본 글자색 */
+}
+
+/* === 롤백: 기존 헤더 스타일 복원 === */
+header {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+/* === 롤백 완료 === */
+
+
+/* 2. 내비게이션 메뉴 (HTML에서 주석 처리됨) */
+/*
+nav {
+    background-color: #333;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+}
+nav li a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+nav li a:hover {
+    background-color: #555;
+}
+*/
+
+/* 3. 메인 콘텐츠 영역 */
+main {
+    padding-bottom: 20px; /* 푸터와의 여백 조정 */
+}
+section {
+    padding: 20px 15px;
+    background-color: white;
+    margin-bottom: 10px; /* 섹션 간 구분 */
+}
+section h2 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* 3-1. 슬라이더(#home) 섹션 */
+#home {
+    padding: 0; /* 슬라이더는 꽉 차게 */
+    margin-bottom: 10px;
+}
+.swiper {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 🔴 1:1 비율로 항상 정사각형 유지 (모바일) */
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* 이미지 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 비율 맞춰 꽉 차게 (모바일: 잘려도 꽉 채움) */
+}
+
+/* 🔴 PC 화면에서 슬라이더 높이를 vh(화면비율)로 변경 */
+@media (min-width: 601px) { /* 화면 너비 601px 이상일 때 (PC) */
+    .swiper {
+        height: 60vh;        /* 🔴 700px 대신 화면 높이의 80% (여기서 70vh, 90vh 등으로 조절) */
+        aspect-ratio: initial; /* 1:1 비율 제한 해제 */
+    }
+    
+    .swiper-slide img {
+        object-fit: contain; /* 🔴 PC에서는 이미지가 잘리지 않고 세로(vh)에 꽉 차게 */
+    }
+}
+
+
+/* 3-2. 연락처(#contact) 섹션 */
+
+/* 🔴 'Contact & Proposal' h2 제목 숨기기 */
+#contact h2 {
+    display: none;
+}
+
+/* === 사장님이 주신 '아이콘+텍스트' 버튼 스타일로 교체되었습니다 === */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* PC에서 버튼을 가운데 정렬하기 위해 추가 */
+    gap: 16px;
+    margin-top: 30px;
+    margin-bottom: 40px; 
+}
+.button {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; 제거 -> 좌측 정렬 */
+    background: #ffffff;
+    color: #333;
+    width: 100%; /* 너비를 100%로 설정 */
+    max-width: 450px; /* PC에서의 최대 너비 제한 */
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    box-sizing: border-box; /* padding을 포함하여 너비 계산 */
+}
+.button:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+.button img {
+    width: 42px;   /* 1:1 비율을 위해 width 고정 */
+    height: 42px;  /* 세로는 42px로 고정 */
+    object-fit: contain; /* 이미지가 찌그러지지 않도록 비율 유지 */
+    margin-right: 20px;
+}
+
+/* 화면 너비가 600px 이하일 때 (모바일 환경) */
+@media (max-width: 600px) {
+    .button {
+        max-width: 100%; /* 최대 너비 제한 해제 */
+    }
+}
+/* === 스타일 교체 완료 === */
+
+
+/* 폼 제안서 버튼 (HTML에서 버튼 리스트로 통합됨) */
+/*
+.proposal-link {
+    margin-top: 0; 
+    display: flex;
+    justify-content: center;
+}
+.btn-proposal {
+    display: block; 
+    width: 100%; 
+    max-width: 450px; 
+    padding: 15px;
+    background-color: #007bff; 
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-sizing: border-box; 
+}
+*/
+
+
+/* 4. 푸터 */
+footer {
+    background-color: #f4f4f4; /* 배경색 */
+    color: #aaa;
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    
+    /* 화면 최하단에 고정 (선택사항) */
+    /*
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    */
+}
+.footer-logo {
+    margin-bottom: 10px;
+}
+.footer-logo img {
+    width: 250px; /* 로고 크기 조정 */
+    opacity: 1; /* 투명도 조정 */
+}
+
+/* 👇 사업자 정보 스타일 추가 */
+.biz-info {
+    /* font-size(0.8rem), color(#aaa), line-height(1.5), text-align(center)은
+      부모인 footer에서 모두 상속받아 이미 적용되어 있습니다.
+    */
+    margin-top: 10px; /* 로고와 약간의 간격을 줍니다. */
+}
+

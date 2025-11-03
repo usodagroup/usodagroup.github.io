@@ -1,138 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>유소다그룹</title>
-  <meta name="description" content="의류, 잡화, 식품 재고 매입 및 수출 전문 기업 (주)유소다그룹의 공식 홈페이지입니다.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.usoda.co.kr/">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #f9f8ff;
-      margin: 0;
-      padding: 40px 20px;
-      color: #333;
-      line-height: 1.6;
-      text-align: center;
-    }
-    .content-wrapper {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .logo {
-      max-width: 300px;
-      margin-bottom: 25px;
-    }
-    h1 {
-      color: #1e88e5;
-      margin-bottom: 0.5em;
-      font-weight: 700;
-      font-size: 2em;
-    }
-    h2 {
-      font-size: 1.2em;
-      color: #555;
-      margin-bottom: 2.5em;
-      font-weight: 400;
-    }
-    h3 {
-      margin-bottom: 2em;
-      color: #444;
-      font-weight: 700;
-      font-size: 1.4em;
-    }
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* PC에서 버튼을 가운데 정렬하기 위해 추가 */
-      gap: 16px;
-      margin-top: 30px;
-      margin-bottom: 40px;
-    }
-    .button {
-      display: flex;
-      align-items: center;
-      /* justify-content: center; 제거 -> 좌측 정렬 */
-      background: #ffffff;
-      color: #333;
-      width: 100%; /* 너비를 100%로 설정 */
-      max-width: 450px; /* PC에서의 최대 너비 제한 */
-      padding: 12px 25px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      border: 1px solid #eee;
-      box-sizing: border-box; /* padding을 포함하여 너비 계산 */
-    }
-    .button:hover {
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-      transform: translateY(-2px);
-    }
-    .button img {
-      width: 42px;
-      height: 42px;
-      margin-right: 20px;
-    }
-    
-    /* 화면 너비가 600px 이하일 때 (모바일 환경) */
-    @media (max-width: 600px) {
-      .button {
-        max-width: 100%; /* 최대 너비 제한 해제 */
-      }
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)유소다그룹 | 재고 매입부터 수출까지 다이렉트로 진행</title>
 
-    .footer {
-      font-size: 0.85em;
-      color: #888;
-      margin-top: 50px;
-      padding-top: 25px;
-      line-height: 1.8;
-    }
-  </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="content-wrapper">
-    <img src="usoda.png" alt="유소다그룹 로고" class="logo">
 
-    <h1>재고관리! 미래를 위한 투자입니다</h1>
-    <h2>(주)유소다그룹이 여러분과 함께 하겠습니다</h2>
+    <!-- 롤백: 기존 헤더로 복원 -->
+    <header>
+        <h1>(주)유소다그룹</h1>
+    </header>
 
-    <h3><strong>의류, 잡화, 식품 재고 매입 / 수출 유통 전문</strong></h3>
+    <!-- <nav>
+        <ul>
+            <li><a href="#home">홈</a></li>
+            <li><a href="#contact">연락처</a></li>
+            </ul>
+    </nav> -->
 
-    <div class="button-container">
-      <a class="button" href="tel:01027507500">
-        <img src="phone.png" alt="전화 아이콘">
-        <span>상담 전화: 010-2750-7500</span>
-      </a>
-      <a class="button" href="https://pf.kakao.com/_VGAxnG" target="_blank">
-        <img src="kakao.png" alt="카카오톡 아이콘">
-        <span>카카오톡 채널 바로가기</span>
-      </a>
-      <a class="button" href="https://blog.naver.com/usodagroup" target="_blank">
-        <img src="naver.png" alt="네이버 블로그 아이콘">
-        <span>네이버 블로그</span>
-      </a>
-      <a class="button" href="https://www.youtube.com/@usodagroup" target="_blank">
-        <img src="youtube.png" alt="유튜브 아이콘">
-        <span>유튜브 재고처리반장</span>
-      </a>
-    </div>
+    <main>
+        
+        <section id="home">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
 
-    <div class="footer">
-      <p>(주)유소다그룹<br>
-      대표: 전용현<br>
-      사업자 등록번호: 857-88-02362<br>
-      주소: 경기도 양주시 만송로330번길 22-12<br>
-      이메일: ceo@usoda.co.kr<br>
-      대표번호: 010-2750-7500</p>
-    </div>
-  </div>
+        <!-- 👇 여기가 사장님이 원하신 '아이콘+텍스트' 버튼 스타일로 변경되었습니다 -->
+        <section id="contact">
+            <h2>Contact & Proposal</h2>
+            
+            <!-- .sns-links -> .button-container 로 변경하고 내부 구조 수정 -->
+            <div class="button-container">
+                <a class="button" href="https://forms.gle/FYUzPpiweuTiYSCU6" target="_blank">
+                    <img src="forms.png" alt="폼 아이콘">
+                    <span>60초 간편 매입 제안서</span>
+                </a>
+                <a class="button" href="tel:01027507500">
+                    <img src="phone.png" alt="전화 아이콘">
+                    <span>상담 전화: 010-2750-7500</span>
+                </a>
+                <a class="button" href="https://pf.kakao.com/_VGAxnG" target="_blank">
+                    <img src="kakao.png" alt="카카오톡 아이콘">
+                    <span>카카오톡 채널 바로가기</span>
+                </a>
+                <a class="button" href="https://blog.naver.com/usodagroup" target="_blank">
+                    <img src="naver.png" alt="네이버 블로그 아이콘">
+                    <span>네이버 블로그</span>
+                </a>
+                <a class="button" href="https://www.youtube.com/@usodagroup" target="_blank">
+                    <img src="youtube.png" alt="유튜브 아이콘">
+                    <span>유튜브 재고처리반장</span>
+                </a>
+            </div>
+            
+            <!-- 폼 제안서는 기존 스타일(파란 버튼)을 유지합니다 -->
+            <!-- <div class="proposal-link">
+                <a href="YOUR_FORM_LINK_HERE" class="btn-proposal" target="_blank">폼 매입제안서 작성하기</a>
+            </div> -->
+        </section>
+        
+        </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="usoda.png" alt="유소다 로고">
+        </div>
+        <div class="biz-info">
+            (주)유소다그룹 | 대표 : 전용현<br>
+            사업자 등록번호 : 857-88-02362<br>
+            주소 : 경기도 양주시 만송로330번길 22-12<br>
+            이메일 : ceo@usoda.co.kr<br>
+            대표번호 : 1522-1921<br>
+            © 2025 UsodaGroup Co. Ltd. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
