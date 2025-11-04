@@ -3,24 +3,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 1. Swiper 슬라이더를 초기화(실행)합니다.
     const swiper = new Swiper('.mySwiper', {
-        // 옵션: 반복 재생
-        loop: true, 
-        
-        // 옵션: 자동 재생 (3초마다)
+        // --- 공통 옵션 ---
+        loop: true, // 순환
         autoplay: {
             delay: 3000,
             disableOnInteraction: false, // 사용자가 만져도 계속 자동재생
         },
-
-        // 옵션: 페이지네이션 (아래 점...)
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
+
+        // --- 🔴 반응형 설정 (Breakpoints) ---
+        // 화면 너비에 따라 다른 설정을 적용
+        breakpoints: {
+            // 모바일 (600px 이하)
+            0: {
+                slidesPerView: 1, // 1장만 보임
+                spaceBetween: 0,
+                centeredSlides: false, // 1장일 땐 중앙 정렬 아님
+            },
+            // PC (601px 이상)
+            601: {
+                slidesPerView: 'auto', // 🔴 'auto'로 변경 (css 너비 자동 인식)
+                spaceBetween: 10,      // 🔴 간격은 10px로 고정
+                centeredSlides: true,  // 🔴 중앙 정렬 유지
+            }
+        }
     });
 
     // 2. (핵심) 사진 목록 파일을 읽어와서 슬라이더를 채웁니다.
-    // '방법 2: JSON 파일 관리' 방식입니다.
     loadGalleryImages(); 
 });
 
@@ -29,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
  * gallery.json 파일을 읽어와서 Swiper 슬라이드 항목을 동적으로 생성합니다.
  */
 function loadGalleryImages() {
-    // 1. JSON 파일 경로. (5단계에서 만들 파일입니다)
+// ... (The rest of the file is unchanged) ...
+    // 1. JSON 파일 경로.
     const jsonPath = 'gallery.json'; 
 
     // 2. fetch API로 JSON 파일을 비동기로 가져옵니다.
@@ -74,3 +87,4 @@ function loadGalleryImages() {
             swiperWrapper.innerHTML = '<div class="swiper-slide">사진을 불러오는 데 실패했습니다.</div>';
         });
 }
+
