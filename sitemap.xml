@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="[http://www.sitemaps.org/schemas/sitemap/0.9](http://www.sitemaps.org/schemas/sitemap/0.9)">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>[https://www.usoda.co.kr/](https://www.usoda.co.kr/)</loc>
+        <loc>https://www.usoda.co.kr/</loc>
         <lastmod>2025-11-04</lastmod> <!-- (사이트 수정한 날짜) -->
         <priority>1.0</priority>
     </url>
     <!-- 
     (나중에 contact.html 페이지가 생기면 아래 주석을 풀고 추가)
     <url>
-        <loc>[https://www.usoda.co.kr/contact.html](https://www.usoda.co.kr/contact.html)</loc>
+        <loc>https://www.usoda.co.kr/contact.html</loc>
         <lastmod>2025-11-04</lastmod>
         <priority>0.8</priority>
     </url>
